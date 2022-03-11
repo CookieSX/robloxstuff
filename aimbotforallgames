@@ -2905,6 +2905,9 @@ Run:BindToRenderStep("UpdateInfo", 1000, function()
 end)
 
 Run:BindToRenderStep("Aimbot", Enum.RenderPriority.First.Value, function()
+	local t0 = tick()
+	RunService.RenderSteppedt:Wait()
+	repeat until (t0 + 1/30) < tick()
 	ClosestEnemy = GetClosestPlayerNotBehindWall()
 	if Bullshit.AimbotEnabled and Bullshit.Aimbot then
 		if ClosestEnemy ~= nil then
