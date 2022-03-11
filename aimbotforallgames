@@ -1675,7 +1675,7 @@ function InitMain()
 Scripting by: Racist Dolphin#5199
 GUI by: SOMEONE WHO WANTS HIS NAME HIDDEN.
 
-To hide/show the GUI press the "P" key on your keyboard.
+To hide/show the GUI press the "[" key on your keyboard.
 
 NOTICE: Since my string manipulation skills aren't the greatest, changing esp/cham colors might be quite buggy.
 NOTICE #2: The blacklist feature will return! I just didn't have enough time to make the gui.
@@ -2920,7 +2920,7 @@ Run:BindToRenderStep("Aimbot", Enum.RenderPriority.First.Value, function()
 				if MyHead and MyTor and MyHum and GetHead and GetTor and GetHum then
 					if MyHum.Health > 1 and (GetHum.Health > 1 and not GetChar:FindFirstChild("KO")) then
 						MyPlr.CameraMode = Enum.CameraMode.LockFirstPerson
-						TweenService:Create(MyCam, TweenInfo.new(0.2, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, 0, false, 0), {CFrame = CFrame.new(MyHead.CFrame.p, GetHead.CFrame.p)}):Play()
+						TweenService:Create(MyCam, TweenInfo.new(0.125, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, 0, false, 0), {CFrame = CFrame.new(MyHead.CFrame.p, GetHead.CFrame.p)}):Play()
 						--MyCam.CFrame = CFrame.new(MyHead.CFrame.p, GetHead.CFrame.p)
 						if Bullshit.AutoFire then
 							mouse1click() -- >:(
