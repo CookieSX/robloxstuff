@@ -11,6 +11,7 @@ local CoreGui = game:GetService("CoreGui")
 local StartGui = game:GetService("StarterGui")
 local Teams = game:GetService("Teams")
 local UserInput = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
 local Light = game:GetService("Lighting")
 local HTTP = game:GetService("HttpService")
 local RepStor = game:GetService("ReplicatedStorage")
@@ -2804,7 +2805,7 @@ Change Log:
 	UserInput.InputBegan:connect(function(input, ingui)
 		if not ingui then
 			if input.UserInputType == Enum.UserInputType.Keyboard then
-				if input.KeyCode == Enum.KeyCode.P then
+				if input.KeyCode == Enum.KeyCode.LeftBracket then
 					MainFrame.Visible = not MainFrame.Visible
 				end
 			end
@@ -2919,7 +2920,8 @@ Run:BindToRenderStep("Aimbot", Enum.RenderPriority.First.Value, function()
 				if MyHead and MyTor and MyHum and GetHead and GetTor and GetHum then
 					if MyHum.Health > 1 and (GetHum.Health > 1 and not GetChar:FindFirstChild("KO")) then
 						MyPlr.CameraMode = Enum.CameraMode.LockFirstPerson
-						MyCam.CFrame = CFrame.new(MyHead.CFrame.p, GetHead.CFrame.p)
+						TweenService:Create(MyCam, TweenInfo.new(0.25, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 0), {CFrame = CFrame.new(MyHead.CFrame.p, GetHead.CFrame.p}):Play()
+						--MyCam.CFrame = CFrame.new(MyHead.CFrame.p, GetHead.CFrame.p)
 						if Bullshit.AutoFire then
 							mouse1click() -- >:(
 						end
