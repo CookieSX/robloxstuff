@@ -2920,7 +2920,7 @@ Run:BindToRenderStep("Aimbot", Enum.RenderPriority.First.Value, function()
 				if MyHead and MyTor and MyHum and GetHead and GetTor and GetHum then
 					if MyHum.Health > 1 and (GetHum.Health > 1 and not GetChar:FindFirstChild("KO")) then
 						MyPlr.CameraMode = Enum.CameraMode.LockFirstPerson
-						TweenService:Create(MyCam, TweenInfo.new(0.25, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 0), {CFrame = CFrame.new(MyHead.CFrame.p, GetHead.CFrame.p)}):Play()
+						TweenService:Create(MyCam, TweenInfo.new(0.2, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, 0, false, 0), {CFrame = CFrame.new(MyHead.CFrame.p, GetHead.CFrame.p)}):Play()
 						--MyCam.CFrame = CFrame.new(MyHead.CFrame.p, GetHead.CFrame.p)
 						if Bullshit.AutoFire then
 							mouse1click() -- >:(
